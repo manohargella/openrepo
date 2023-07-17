@@ -1,0 +1,154 @@
+ 
+.heading{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(42, 42, 247);
+    border-color: black;
+}
+.python{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 60px;
+    margin-right: 30px;
+    border-style: solid;
+    border-color: rgb(117, 117, 233);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.python:hover{
+    background-color: rgb(62, 62, 222);
+    color: white;
+
+}
+.java{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 30px;
+    border-style: solid;
+    border-color: rgb(117, 117, 233);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.java:hover{
+    background-color: rgb(62, 62, 222);
+    color: white;
+}
+.cpp{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 30px;
+    border-style: solid;
+    border-color: rgb(117, 117, 233);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.cpp:hover{
+    background-color: rgb(62, 62, 222);
+    color: white;
+}
+.c{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 20px;
+    border-style: solid;
+    border-color: rgb(117, 117, 233);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.c:hover{
+    background-color: rgb(62, 62, 222);
+    color: white;
+}
+.js{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 20px;
+    border-style: solid;
+    border-color: rgb(117, 117, 233);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-right: 30px;
+}
+.js:hover{
+    background-color: rgb(62, 62, 222);
+    color: white;
+}
+.php{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 30px;
+    border-style: solid;
+    border-color: rgb(117, 117, 233);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.php:hover{
+    background-color: rgb(62, 62, 222);
+    color: white;
+}
+.csp{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 30px;
+    border-style: solid;
+    border-color: rgb(117, 117, 233);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.csp:hover{
+    background-color: rgb(62, 62, 222);
+    color: white;
+}
+.act{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 20px;
+    border-style: solid;
+    border-color: rgb(117, 117, 233);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.act:hover{
+    background-color: rgb(62, 62, 222);
+    color: white;
+}

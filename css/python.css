@@ -1,0 +1,32 @@
+.home{
+    height: 40px;
+    width: 80px;
+    border-color: blue;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.home:hover{
+    background-color: blue;
+    color: white;
+}
+.pdf{
+    height: 50px;
+    width: 150px;
+    border-color: blue;
+    border-width: 1px;
+    border-radius: 30px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+.pdf:hover{
+    background-color: blue;
+    color: white;
+}
