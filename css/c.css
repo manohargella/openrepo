@@ -1,0 +1,16 @@
+.home{
+    height: 40px;
+    width: 80px;
+    border-color: blue;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.home:hover{
+    background-color: blue;
+    color: white;
+}
