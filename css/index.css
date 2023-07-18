@@ -1,154 +1,162 @@
- 
-.heading{
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the navigation bar */
+  /* Your existing styles here */
+
+/* Your existing styles here */
+
+/* Your existing styles here */
+
+nav {
+    background-color: #000000;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav li a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  /* Add styles for the search bar */
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-bar button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  
+  .search-bar button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+
+  /* Style the homepage and about page content */
+  .languages {
     text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .languages h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .languages p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .languages .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .languages .language {
+    margin: 0 10px;
+  }
+  
+  .languages li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
 
-    color: rgb(42, 42, 247);
-    border-color: black;
+.languages li a:hover {
+  color: #4caf50;
 }
-.python{
-    height: 100px;
-    width: 300px;
-    font-weight: bold;
-    font-size: 50px;
-    margin-left: 60px;
-    margin-right: 30px;
-    border-style: solid;
-    border-color: rgb(117, 117, 233);
-    border-radius: 3px;
-    background-color: white;
-    transition: background-color 0.5s, color 0.5s;
+  
+  .language-content {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .language-content:hover {
+    transform: scale(1.05);
+  }
+  
+  .language-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .language-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .start-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+  }
+  
+  .start-button:hover {
+    background-color: #45a049;
+  }
+  .languages li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
 }
-.python:hover{
-    background-color: rgb(62, 62, 222);
-    color: white;
 
-}
-.java{
-    height: 100px;
-    width: 300px;
-    font-weight: bold;
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 30px;
-    border-style: solid;
-    border-color: rgb(117, 117, 233);
-    border-radius: 3px;
-    background-color: white;
-    transition: background-color 0.5s, color 0.5s;
-    cursor: pointer;
-}
-.java:hover{
-    background-color: rgb(62, 62, 222);
-    color: white;
-}
-.cpp{
-    height: 100px;
-    width: 300px;
-    font-weight: bold;
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 30px;
-    border-style: solid;
-    border-color: rgb(117, 117, 233);
-    border-radius: 3px;
-    background-color: white;
-    transition: background-color 0.5s, color 0.5s;
-    cursor: pointer;
-}
-.cpp:hover{
-    background-color: rgb(62, 62, 222);
-    color: white;
-}
-.c{
-    height: 100px;
-    width: 300px;
-    font-weight: bold;
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 20px;
-    border-style: solid;
-    border-color: rgb(117, 117, 233);
-    border-radius: 3px;
-    background-color: white;
-    transition: background-color 0.5s, color 0.5s;
-    cursor: pointer;
-}
-.c:hover{
-    background-color: rgb(62, 62, 222);
-    color: white;
-}
-.js{
-    height: 100px;
-    width: 300px;
-    font-weight: bold;
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 20px;
-    border-style: solid;
-    border-color: rgb(117, 117, 233);
-    border-radius: 3px;
-    background-color: white;
-    transition: background-color 0.5s, color 0.5s;
-    cursor: pointer;
-    margin-left: 60px;
-    margin-right: 30px;
-}
-.js:hover{
-    background-color: rgb(62, 62, 222);
-    color: white;
-}
-.php{
-    height: 100px;
-    width: 300px;
-    font-weight: bold;
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 30px;
-    border-style: solid;
-    border-color: rgb(117, 117, 233);
-    border-radius: 3px;
-    background-color: white;
-    transition: background-color 0.5s, color 0.5s;
-    cursor: pointer;
-}
-.php:hover{
-    background-color: rgb(62, 62, 222);
-    color: white;
-}
-.csp{
-    height: 100px;
-    width: 300px;
-    font-weight: bold;
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 30px;
-    border-style: solid;
-    border-color: rgb(117, 117, 233);
-    border-radius: 3px;
-    background-color: white;
-    transition: background-color 0.5s, color 0.5s;
-    cursor: pointer;
-}
-.csp:hover{
-    background-color: rgb(62, 62, 222);
-    color: white;
-}
-.act{
-    height: 100px;
-    width: 300px;
-    font-weight: bold;
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 20px;
-    border-style: solid;
-    border-color: rgb(117, 117, 233);
-    border-radius: 3px;
-    background-color: white;
-    transition: background-color 0.5s, color 0.5s;
-    cursor: pointer;
-}
-.act:hover{
-    background-color: rgb(62, 62, 222);
-    color: white;
+.languages li a:hover {
+  color: #4caf50;
 }

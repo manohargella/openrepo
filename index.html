@@ -1,26 +1,70 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>openrepo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="img/logo.png">
-
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="javascript" href="script.js">
 </head>
 <body>
-    <div class="top">
-        <h1 class="heading">All the tech paths</h1>
+    <nav>
+        <div class="logo">
+          <img src="img/vlogo.png" alt="Your Logo">
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <form id="search-form">
+              <input type="text" id="search-input" placeholder="Search languages...">
+              <button type="submit">Search</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+  <section class="languages">
+    <h1>Welcome to OpenRepo</h1>
+    <p>free Repos to learn coding</p>
+    <div class="row">
+      <div class="language">
+          <div class="language-content">
+            <h2>JavaScript</h2>
+            <p>Repo of resource to learn javascript free</p>
+            <button class="start-button">Start Here</button>
+          </div>
+      </div>
+      <div class="language">
+          <div class="language-content">
+            <h2>Python</h2>
+            <p>Repo of resource to learn Python free</p>
+            <button class="start-button">Start Here</button>
+          </div>
+      </div>
     </div>
-    <hr noshade="5"><br>
-    <a href="pyhton.html"><button class="python">Python</button></a>
-    <a href="java.html"><button class="java">Java</button></a>
-    <a href="cpp.html"><button class="cpp">C++</button></a>
-    <a href="c.html"><button class="c">C</button></a>
-    <br><br><br>
-    <a href="js.html"><button class="js">JavaScript</button></a>
-    <a href="php.html"><button class="php">PHP</button></a>
-    <a href="csharp.html"><button class="csp">C#</button></a>
-    <a href="react.html"><button class="act">React</button></a>
+    <div class="row">
+      <div class="language">
+          <div class="language-content">
+            <h2>Java</h2>
+            <p>Repo of resource to learn Java free</p>
+            <button class="start-button">Start Here</button>
+          </div>
+      </div>
+      <div class="language">
+          <div class="language-content">
+            <h2>C#</h2>
+            <p>Repo of resource to learn C# free</p>
+            <button class="start-button">Start Here</button>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="language">
+          <div class="language-content">
+            <h2>Ruby</h2>
+            <p>Repo of resource to learn Ruby free.</p>
+            <button class="start-button">Start Here</button>
+          </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
