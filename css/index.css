@@ -5,11 +5,12 @@ body, ul {
   }
   
   /* Style the navigation bar */
-  /* Your existing styles here */
 
-/* Your existing styles here */
-
-/* Your existing styles here */
+nav li a {
+    font-family: 'Montserrat', sans-serif;
+    /* Other styles */
+  }
+  
 
 nav {
     background-color: #000000;
@@ -45,30 +46,46 @@ nav {
   }
   
   /* Add styles for the search bar */
-  .search-bar {
+  
+/* Add styles for the search bar */
+.search-bar {
     display: flex;
     align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 6px;
   }
   
   .search-bar input[type="text"] {
+    flex: 1;
     padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
   }
   
   .search-bar button[type="submit"] {
-    background-color: #4caf50;
+    background-color: #0eef15;
     color: #fff;
     border: none;
     border-radius: 4px;
     padding: 8px 16px;
     margin-left: 8px;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
   }
   
   .search-bar button[type="submit"]:hover {
     background-color: #45a049;
   }
+  
   
 
   /* Style the homepage and about page content */
