@@ -1,42 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>OpenRepo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="icon" href="img/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Nav Bar</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Link the custom CSS file -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">
-      <img src="img/openrepo (2) (1).png" alt="Your Logo">
+  <nav class="navbar navbar-expand-md navbar-custom">
+    <div class="container">
+      <!-- Brand/logo -->
+      <img src="img/logo.png" alt="" style="width: 50px;">
+      <a class="navbar-brand" href="#">OpenRepo</a>
+
+      <!-- Toggle button for mobile navigation -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contribute.html">Contribute</a></li>
-    </ul>
+  </nav>
+  <hr>
+
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/pyhton.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/cpp.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="img/c.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="img/csharp.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="img/js.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="img/java.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
   </div>
-  <br>
-  <center>
-    <h1>Free resource Respo's</h1>
-    <p>start learning</p>
-  </center>
-  <br><br>
-  <div class="languages" style="height: 300px;">
-    <center>
-    <a href="pyhton.html"><button class="python">Python</button></a><br><br>
-    <a href="java.html"><button class="java">Java</button></a><br><br>
-    <a href="cpp.html"><button class="cpp">C++</button></a><br><br>
-    <a href="c.html"><button class="c">C</button></a><br><br>
-    <a href="js.html"><button class="js">JavaScript</button></a><br><br>
-    <a href="php.html"><button class="php">PHP</button></a><br><br>
-    <a href="csharp.html"><button class="csp">C#</button></a><br><br>
-    <a href="react.html"><button class="act">React</button></a>
-  </center>
-  <br><br>
-  <center>
-    <p>more coming soon - &copy; all rights reserved by openrepo</p>
-  </center>
+
+  <!-- Include Bootstrap's JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
