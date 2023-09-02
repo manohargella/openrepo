@@ -72,6 +72,31 @@ main {
         transform: scale(1);
     }
 }
+/* ... (existing styles) ... */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+header h1 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+}
+
+main {
+        padding: 20px; /* Decrease padding for smaller screens */
+}
+
+.countdown {
+    font-size: 20px; /* Decrease font size for countdown on smaller screens */
+}
+
+.education-info {
+        padding: 20px; /* Add padding to the education section for better spacing */
+}
+
+/* Adjust background animation for better visibility on mobile */
+.bg-animation {
+        display: none; /* Hide the background animation on mobile */
+ }
+}
 
  /* Add any additional styling here */
 
