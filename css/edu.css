@@ -1,0 +1,97 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+main {
+    padding: 40px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+#days, #hours, #minutes, #seconds {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60px;
+    display: inline-block;
+}
+
+.bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('your-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: bgAnimation 20s infinite;
+}
+
+@keyframes bgAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+ /* Add any additional styling here */
+
+ .footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as per your logo size */
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+}
+
+/* Make the footer text center-aligned for small screens */
+@media (max-width: 767px) {
+    .footer {
+        text-align: center;
+    }
+}
