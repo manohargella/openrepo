@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Launching Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy Gradient Button with Custom Font</title>
+  <!-- Link to Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom gradient animation */
+    .gradient-button {
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      background-size: 200% 200%;
+      color: #fff;
+      transition: background 0.5s ease;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: 'Your Custom Font', sans-serif; /* Replace 'Your Custom Font' with the desired font name */
+    }
+
+    .gradient-button:hover {
+      background-position: right center;
+      animation: pulse 0.5s infinite alternate;
+    }
+
+    /* Custom hover animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.05);
+      }
+    }
+
+    /* Center the button */
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Adjust the height to your preference */
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Coming Soon</h1>
-        </header>
-        <main>
-            <div class="countdown">
-                <!-- ... (countdown timer) ... -->
-            </div>
-            <p>We are launching our website soon. Stay tuned for updates!</p>
-            
-            <!-- New section about OpenRepo Education and competitive exams -->
-            <section class="education-info">
-                <h2>About OpenRepo Education</h2>
-                <p>OpenRepo Education is your one-stop destination for comprehensive information on competitive examinations.</p>
-                <p>Our mission is to provide you with up-to-date and accurate details about various competitive exams, including:</p>
-                <ul>
-                    <li>Entrance Exams for Colleges and Universities</li>
-                    <li>Government Job Exams</li>
-                    <li>Scholarship Exams</li>
-                    <li>And many more...</li>
-                </ul>
-                <p>Whether you're a student looking to prepare for an upcoming exam or a professional seeking career advancement opportunities, we've got you covered.</p>
-                <p>Stay tuned for our website launch to access valuable resources, study materials, and exam updates!</p>
-            </section>
-        </main>
-    </div>
-    <div class="bg-animation"></div>
-    <script src="script.js"></script>
+  <div class="center-container">
+    <!-- Create the button with a custom font using Bootstrap classes -->
+    <a href="home.html" class="btn gradient-button">Go Home</a>
+  </div>
+
+  <!-- Link to Bootstrap JS and jQuery (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
