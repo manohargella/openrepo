@@ -3,70 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <title>Know me</title>
+    <link rel="icon" href="img/logo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .error-message {
-            font-size: 24px;
-            color: #333;
-        }
-
-        .lost-emoji {
-            font-size: 48px;
-            margin-top: 20px;
-        }
-
-        .button-container {
-            margin-top: 20px;
-            animation: fadeInUp 1s ease-in-out;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0077b5;
+            background: linear-gradient(45deg, #333333, #000000);
             color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
+            font-family: Arial, sans-serif;
         }
-
-        .button:hover {
-            background-color: #005a8d;
+        .header {
+            text-align: center;
+            padding: 50px 0;
         }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+        .profile-img {
+            border: 5px solid transparent;
+            border-image: linear-gradient(45deg, #ff00cc, #3333ff);
+            border-image-slice: 1;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        .bio {
+            text-align: center;
+            padding: 30px 0;
+        }
+        .social-buttons {
+            text-align: center;
+            padding: 30px 0;
+        }
+        .social-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .connect-button {
+            text-align: center;
+            margin-top: 50px;
+        }
+        /* Animation Example */
+        @keyframes borderAnimation {
+            0% {
+                border-image-source: linear-gradient(45deg, #ff00cc, #3333ff);
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            50% {
+                border-image-source: linear-gradient(45deg, #3333ff, #ff00cc);
             }
+            100% {
+                border-image-source: linear-gradient(45deg, #ff00cc, #3333ff);
+            }
+        }
+        .profile-img:hover {
+            animation: borderAnimation 3s infinite;
         }
     </style>
 </head>
 <body>
-    <div class="error-message">
-        <p>There is no such place to visit</p>
-        <span class="lost-emoji">😢</span>
+    <div class="container">
+        <div class="header">
+            <h1>Know the Founder</h1>
+        </div>
+        <div class="profile-img">
+            <img src="img/mec.jpg" alt="Your Name" style="width: 190px;">
+        </div>
+        <div class="bio">
+            <h2><b>Little about and other social media links</b></h2>
+            <br>
+            <div class="shit" style="font-size: 20px;">
+                <p><b>Name:</b><i> Manohar Gella</i></p>
+                <p><b>From:</b><i> India</i></p>
+                <p><b>Study:</b><i> CS Undergrad</i></p>
+                <p><b>Mail:</b><i> manohargella272@gmail.com</i></p>
+            </div>
+            
+
+        </div>
+        <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/manohar-gella-2926bb24b/" class="btn btn-primary" role="button">LinkedIn</a>
+            <a href="https://twitter.com/Manohargella1" class="btn btn-info" role="button">Twitter</a>
+            <a href="https://www.instagram.com/manohargella/" class="btn btn-danger" role="button">Instagram</a>
+            <a href="https://github.com/Manohar-Gella" class="btn btn-success" role="button">GitHub</a>
+        </div>
+        <div class="connect-button">
+            <a href="https://openrepo.in" class="btn btn-lg btn-warning" role="button">OpenRepo.in</a>
+        </div>
     </div>
-    <div class="button-container">
-        <a class="button" href="https://openrepo.in" target="_blank" rel="noopener noreferrer">Go back to openrepo.in</a>
-    </div>
+    <br><br>
+
+    <!-- Bootstrap JS and jQuery (Optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
