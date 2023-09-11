@@ -16,7 +16,6 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            transition: background-color 0.5s ease;
         }
         #loading {
             font-size: 24px;
@@ -33,63 +32,17 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        .toggle-container {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .toggle-label {
-            cursor: pointer;
-        }
-        .toggle-input {
-            display: none;
-        }
-        .toggle-slider {
-            position: relative;
-            width: 40px;
-            height: 20px;
-            background-color: #ccc;
-            border-radius: 20px;
-        }
-        .toggle-slider:before {
-            content: "";
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background-color: #fff;
-            top: 1px;
-            left: 1px;
-            transition: 0.4s;
-        }
-        .toggle-input:checked + .toggle-slider {
-            background-color: #2196F3;
-        }
-        .toggle-input:checked + .toggle-slider:before {
-            transform: translateX(20px);
-        }
     </style>
 </head>
 <body>
-    <div class="toggle-container">
-        <label class="toggle-label" for="darkModeToggle">Dark Mode</label>
-        <input type="checkbox" class="toggle-input" id="darkModeToggle">
-        <div class="toggle-slider"></div>
-    </div>
+    <img src="img/edgen-modified.png" alt="" style="width: 100px;">
+    <br><br>
     <div id="loading">Work in Progress</div>
+    <br><br>
     <div id="spinner"></div>
-
-    <script>
-        const darkModeToggle = document.getElementById("darkModeToggle");
-        const body = document.body;
-
-        darkModeToggle.addEventListener("change", () => {
-            if (darkModeToggle.checked) {
-                body.classList.add("dark-mode");
-            } else {
-                body.classList.remove("dark-mode");
-            }
-        });
-    </script>
+    <br><br>
+    <center>
+        <p>We currently so hard to publish the page.</p>
+    </center>
 </body>
 </html>
