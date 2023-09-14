@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas Dark Theme Background Animation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -11,15 +15,54 @@
             background-color: #1a1a1a; /* Dark background color */
         }
 
-        canvas {
+        #background {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: -1;
+        }
+
+        #profile-card {
+            background-color: #292929; /* Dark card background color */
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #profile-card img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #0077b5; /* LinkedIn button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <canvas id="background"></canvas>
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div id="profile-card">
+            <img src="img/me.png" alt="Your Name">
+            <br><br>
+            <h1>Manohar Gella  </h1>
+            <br>
+            <p>CS UnderGrad, Currently building <a href="openrepo.in">OpenRepo</a></p>
+            <br>
+            <p>Email: manoharcodes@gmail.com</p>
+            <a href="https://www.linkedin.com/in/manohar-gella-2926bb24b/" class="contact-button" target="_blank">LinkedIn</a>
+            <!-- Add other contact buttons here -->
+        </div>
+    </div>
     <script>
         const canvas = document.getElementById("background");
         const ctx = canvas.getContext("2d");
