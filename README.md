@@ -1,6 +1,6 @@
 # OpenRepo: Learn Programming with Free Resources
 
-![OpenRepo Logo](https://drive.google.com/file/d/1UhkhkUnhBiezGiybQetoF323NPNgIw4Q/view?usp=sharing)
+![OpenRepo](https://openrepo.in/img/logo.png)
 
 Welcome to OpenRepo, your go-to open-source platform for finding free resources on the internet to learn programming. We believe that knowledge should be freely accessible to everyone, and our mission is to provide a central hub where you can discover a wealth of programming resources, tutorials, and guides without any cost.
 
