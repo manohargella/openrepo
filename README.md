@@ -48,31 +48,3 @@ If you encounter any issues or have suggestions for improving OpenRepo, please [
 ### Spread the Word
 
 Help us reach a broader audience by sharing OpenRepo with your friends, colleagues, and social networks. The more people who know about us, the more valuable our resource repository becomes.
-
-## Meet the Contributors
-
-OpenRepo owes its success to the dedicated contributors who have generously shared their knowledge and resources to benefit the programming community. Here are some of our active contributors:
-
-- **John Doe (@johndoe)**
-  - Bio: John is a software engineer with over 10 years of experience in web development. He's passionate about teaching and regularly contributes to OpenRepo with his favorite web development tutorials.
-  - Contributions: [John's Resources](https://www.openrepo.org/user/johndoe)
-
-- **Jane Smith (@janesmith)**
-  - Bio: Jane is a data scientist and machine learning enthusiast. She believes in accessible education and has curated a list of free data science courses for OpenRepo.
-  - Contributions: [Jane's Resources](https://www.openrepo.org/user/janesmith)
-
-- **Your Name (@yourusername)**
-  - Bio: Join our community of contributors and share your knowledge with the world! Become a contributor today and make a difference.
-  - Contributions: [Your Contributions](https://www.openrepo.org/user/yourusername)
-
-## License
-
-OpenRepo is an open-source project released under the [MIT License](LICENSE). You are free to use, modify, and distribute the code and content as long as you adhere to the license terms.
-
-Thank you for being a part of the OpenRepo community. Together, we can make programming education accessible to everyone. Happy learning!
-
-For questions or inquiries, please contact us at [contact@openrepo.org](mailto:contact@openrepo.org).
-
----
-
-*Note: This README is a template, and you should customize it to fit the specific details and needs of your OpenRepo project.*
