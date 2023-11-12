@@ -1,12 +1,36 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs</title>
+    <link rel="stylesheet" href="css/blog.css">
+    <title>Your Programming Blog</title>
 </head>
 <body>
-    <center>
-        <h1>Ready to get the Blogs</h1>
-    </center>
+    <header>
+        <!-- Add this button inside the <header> element -->
+        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+
+        <div class="container">
+            <h1>Your Programming Blog</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Blog Posts Go Here -->
+        <article class="post">
+            <h2>Post Title</h2>
+            <p class="post-meta">Published on November 12, 2023</p>
+            <p>Blog content goes here...</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Programming Blog</p>
+        </div>
+    </footer>
+
+    <script src="js/blog.js"></script>
 </body>
 </html>

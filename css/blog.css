@@ -1,0 +1,73 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.post {
+    margin-bottom: 40px;
+}
+
+.post h2 {
+    color: #3498db;
+}
+
+.post-meta {
+    color: #95a5a6;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
+}
+
+
+/* Dark Theme Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background-color: #212121;
+}
+
+.dark-mode .post h2 {
+    color: #bb86fc;
+}
+
+.dark-mode .post-meta {
+    color: #cf6679;
+}
+
+.dark-mode footer {
+    background-color: #212121;
+}
