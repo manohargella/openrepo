@@ -9,6 +9,7 @@ sample_data = {
 }
 
 # Route to handle API requests
+# for get scess
 @app.route('/api/sample', methods=['GET'])
 def get_sample_data():
     return jsonify(sample_data)
