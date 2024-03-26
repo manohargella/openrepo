@@ -1,117 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launching Soon!</title>
-    <link rel="icon" href="img/bitcoin.png">
-    <!-- Add Bootstrap CSS CDN link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Add custom styles for the background color and centering text */
-        body {
-            background: #6A0572; /* Violet background color */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            flex-direction: column;
-        }
-
-        .logo {
-            font-size: 36px;
-            color: #000; /* Black color */
-            background: #D9A7C7; /* Highlight background color */
-            padding: 10px 20px; /* Add padding to highlight */
-            border: 2px solid #6A0572; /* Highlight border */
-            border-radius: 10px; /* Rounded corners */
-            margin-bottom: 20px;
-            animation: fadeIn 2s ease-in-out;
-            font-weight: bold; /* Make it bold */
-            font-family: 'Arial', sans-serif; /* Use a different font */
-            text-align: center; /* Center horizontally */
-        }
-
-        h1 {
-            font-size: 48px;
-            background: -webkit-linear-gradient(#D9A7C7, #6A0572); /* Violet gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-            color: #777; /* Dark white text color (light gray) */
-            animation: moveText 2s ease infinite alternate;
-        }
-
-        @keyframes moveText {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        /* Custom hover animation */
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.05);
-            }
-        }
-
-        .button {
-            height: 50px;
-            width: 200px;
-            border-radius: 30px;
-            border: none;
-            background-color: #3B2667
-E;
-            background-image: #E2B0FF
-;
-            color: black;
-            font-weight: bold;
-        }
-        .button:hover {
-            background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Blockchain Learning Resources</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .navbar-nav .nav-link {
+      font-size: 18px;
+    }
+    .jumbotron {
+      background-color: #343a40;
+      color: #fff;
+      padding: 100px 30px;
+      border-radius: 0;
+    }
+    .jumbotron h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .lead {
+      font-size: 20px;
+    }
+    .resource-section {
+      margin-top: 50px;
+    }
+    .resource {
+      margin-bottom: 50px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .resource:hover {
+      transform: translateY(-5px);
+    }
+    .resource h3 {
+      color: #343a40;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .resource p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      font-size: 18px;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+    }
+    footer p {
+      margin: 0;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-    <br><br>
-    <center>
-        <img src="img/bitcoin.png" alt="" style="width: 100px;">
-    </center>
-    <br><br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="logo">Blockchain - Free learning resources</div>
-                <h1>Coming Soon!</h1>
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <center>
-        <a href="index.html" ><button class="button">Explore Other Repos</button></a>
-    </center>
-    
 
-    <!-- Add Bootstrap JS and jQuery CDN links (optional) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!--Will be launched on 27th september end of home-->
-</body>
-</html>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Free Blockchain Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#websites">Websites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#books">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#youtube">YouTube Channels</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1 class="display-4">Free Blockchain Learning Resources</h1>
+      <p class="lead">Discover high-quality resources to master blockchain technology.</p>
+    </div>
+  </div>
+
+  <!-- Website Resources Section -->
+  <section id="websites" class="resource-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Free Learning Resources via Websites</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resource">
+            <h3>1. Coursera</h3>
+            <p>Coursera offers various blockchain courses for free.</p>
+            <a href="https://www.coursera.org/" class="btn btn-primary">Visit Coursera</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resource">
+            <h3>2. edX</h3>
+            <p>edX provides free courses on blockchain from top universities.</p>
+            <a href="https://www.edx.org/" class="btn btn-primary">Visit edX</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books Resources Section -->
+  <section id="books" class="resource-section bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Free Books Available Online</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resource">
+            <h3>1. Mastering Blockchain by Imran Bashir</h3>
+            <p>Mastering Blockchain is a comprehensive guide to understanding blockchain technology.</p>
+            <a href="https://github.com/PacktPublishing/Mastering-Blockchain-Second-Edition" class="btn btn-primary">Read Online</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resource">
+            <h3>2. Blockchain Basics by Daniel Drescher</h3>
+            <p>Blockchain Basics provides a clear introduction to blockchain technology.</p>
+            <a href="https://github.com/danmermel/Blockchain-Basics" class="btn btn-primary">Read Online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Channels Section -->
+  <section id="youtube" class="resource-section">
+    <div class="container">
+      <h2 class="text-center mb-4">YouTube Channels to Learn Blockchain</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resource">
+            <h3>1. Ivan on Tech</h3>
+            <p>Ivan on Tech offers insightful videos on blockchain and cryptocurrency.</p>
+            <a href="https://www.youtube.com/channel/UCrYmtJBtLdtm2ov84ulV-yg" class="btn btn-primary">Watch Now</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resource">
+            <h3>2. Blockchain at Berkeley</h3>
+            <p>Blockchain at Berkeley provides educational content on blockchain technology.</p>
+            <a href="https://www.youtube.com/channel/UC5sgoRfoSp3jeX" class="btn btn-primary">Watch Now</a>
