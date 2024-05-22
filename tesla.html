@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="api.js"></script>
+<body>
+    <div class="container">
+        
+        <input type="number" name="" id="num1">
+        <br><br>
+        <input type="number" name="" id="num2">
+        <br><br>
+        <select id="op" name="cars">
+            <option value=" " id="+">Select any valid operator</option>
+            <option value="`" id="+">Add</option>
+            <option value="-" id="-">Sub</option>
+            <option value="*" id="*">Mul</option>
+            <option value="/" id="/">Div</option>
+        </select>
+        <br><br>
+        <button onclick="sum()">Calculate</button>
+        <button onclick="gone()">Clear</button>
+        <br><br>
+        
+        <div id="result">Ans: </div>
+    </div>
+
+</body>
+</html>

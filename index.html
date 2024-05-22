@@ -1,221 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenRepo - Home</title>
-  <!-- Include Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-  <!-- Link the custom CSS file -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="img/rlogo.png">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794086087835168"crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenRepo</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script defer src="https://unpkg.com/feather-icons"></script>
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            color: #d1d5db;
+        }
+        .card {
+            background: #1f2937;
+            border-color: rgba(255, 255, 255, 0.1); /* Light white border */
+        }
+        .nav-btn {
+            color: #d1d5db;
+        }
+        .nav-btn:hover {
+            color: #3b82f6;
+        }
+        .footer-bg {
+            background-color: #1f2937;
+        }
+        @media (max-width: 767px) {
+            .card {
+                padding: 0; /* Remove inner padding for mobile */
+            }
+            .card-container {
+                padding: 20px; /* Add outer padding for mobile */
+            }
+        }
+    </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-custom">
-    <div class="container">
-      <!-- Brand/logo -->
-      <img src="img/logo.png" alt="" style="width: 50px;">
-      <a class="navbar-brand" href="https://openrepo.in/">OpenRepo</a>
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4 shadow-md fixed w-full z-10 top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Website Name -->
+            <div class="text-xl font-bold text-gray-100">OpenRepo</div>
+            <!-- Quick Links -->
+            <div class="hidden md:flex space-x-4">
+                <a href="under.html" class="text-gray-300 hover:text-blue-500">Home</a>
+                <a href="under.html" class="text-gray-300 hover:text-blue-500">About</a>
+                <a href="under.html" class="text-gray-300 hover:text-blue-500">Contribute</a>
+                <a href="under.html" class="text-gray-300 hover:text-blue-500">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 bg-gray-700 rounded">
+                <i id="mobile-menu-icon" data-feather="menu" class="text-gray-100"></i>
+            </button>
+        </div>
+    </nav>
 
-      <!-- Toggle button for mobile navigation -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navigation links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="https://openrepo.in/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contribute.html">Contribute</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Mobile Sidebar -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-20 hidden flex">
+        <div class="bg-gray-800 w-64 h-full flex flex-col p-4">
+            <button id="close-mobile-menu" class="self-end mb-4 p-2 bg-gray-700 rounded">
+                <i data-feather="x" class="text-gray-100"></i>
+            </button>
+            <a href="under.html" class="nav-btn mb-2">Home</a>
+            <a href="under.html" class="nav-btn mb-2">About</a>
+            <a href="under.html" class="nav-btn mb-2">Contribute</a>
+            <a href="under.html" class="nav-btn mb-2">Contact</a>
+        </div>
     </div>
-  </nav>
-  <hr>
-  <center>
-      <h1>Open Repositories</h1>
-      <p><i>openrepo.in is a community effort to create repos, guides and other educational content to help beginners to learn programming with best free resources availabe on internet. </i></p>
-      <!--About summary of the site for info-->
-  </center>
-    
-  <div class="container mt-4">
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="img/python.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">Pyhton</h5>
-            <p class="card-text">Repo to learn Python and web development.</p>
-            <a href="python.html" class="btn btn-primary">Start Learning</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="img/cpp.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">C++</h5>
-            <p class="card-text">Repo to learn C++ and competitive programming.</p>
-            <a href="https://stupendous-hubcap-0d8.notion.site/C-Free-Learning-Resources-79f333e89cd64eb1bbcfc464ba38ad34?pvs=4" class="btn btn-primary">Start Learning</a>
-          </div>
+    <!-- Main Content -->
+    <div class="container mx-auto mt-16 md:mt-24 my-8 grid gap-8 md:gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 card-container">
+        <!-- Card 1 -->
+        <div class="card shadow-md rounded-lg overflow-hidden flex flex-col border border-solid border-white">
+            <img src="src/grab.png" alt="Placeholder Image" class="w-full h-32 object-cover" style="width: 450px;">
+            <div class="p-4 flex flex-col justify-between flex-grow">
+                <div>
+                    <h2 class="font-bold text-lg text-gray-100">Free resources to learn C++</h2>
+                    <p class="mt-2 text-gray-400">Language, DSA, Game Dev etc.</p>
+                </div>
+                <a href="under.html"><button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Start Learning</button></a>
+            </div>
         </div>
-      </div>
-      
-      <!-- Card 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="img/c.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">C Language</h5>
-            <p class="card-text">Repo to learn C Language and DSA.</p>
-            <a href="c.html" class="btn btn-primary">Start Learning</a>
-          </div>
+        <!-- Card 2 -->
+        <div class="card shadow-md rounded-lg overflow-hidden flex flex-col border border-solid border-white">
+            <img src="src/swift.png" alt="Placeholder Image" class="w-full h-32 object-cover">
+            <div class="p-4 flex flex-col justify-between flex-grow">
+                <div>
+                    <h2 class="font-bold text-lg text-gray-100">Free resources to learn Swift</h2>
+                    <p class="mt-2 text-gray-400">IOS Development</p>
+                </div>
+                <a href="under.html"><button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Start Learning</button></a>
+            </div>
         </div>
-      </div>
+        <!-- Card 3 -->
+        <div class="card shadow-md rounded-lg overflow-hidden flex flex-col border border-solid border-white">
+            <img src="src/5.png" alt="Placeholder Image" class="w-full h-32 object-cover">
+            <div class="p-4 flex flex-col justify-between flex-grow">
+                <div>
+                    <h2 class="font-bold text-lg text-gray-100">Free resources to learn C</h2>
+                    <p class="mt-2 text-gray-400">Language basics and DSA.</p>
+                </div>
+                <a href="under.html"><button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Start Learning</button></a>
+            </div>
+        </div>
 
-      <!-- Card 4 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="img/csharp.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">C#</h5>
-            <p class="card-text">Repo to learn C# with game development.</p>
-            <a href="csharp.html" class="btn btn-primary">Start Learning</a>
-          </div>
+        <!-- Card 1 -->
+        <div class="card shadow-md rounded-lg overflow-hidden flex flex-col border border-solid border-white">
+            <img src="src/4.png" alt="Placeholder Image" class="w-full h-32 object-cover" style="width: 450px;">
+            <div class="p-4 flex flex-col justify-between flex-grow">
+                <div>
+                    <h2 class="font-bold text-lg text-gray-100">Free resources to learn C#</h2>
+                    <p class="mt-2 text-gray-400">Servers and Game devlopment </p>
+                </div>
+                <a href="under.html"><button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Start Learning</button></a>
+            </div>
         </div>
-      </div>
+        <!-- Card 2 -->
+        <div class="card shadow-md rounded-lg overflow-hidden flex flex-col border border-solid border-white">
+            <img src="src/2.png" alt="Placeholder Image" class="w-full h-32 object-cover">
+            <div class="p-4 flex flex-col justify-between flex-grow">
+                <div>
+                    <h2 class="font-bold text-lg text-gray-100">Free resources to learn Python</h2>
+                    <p class="mt-2 text-gray-400">AI, ML, DL, Web Dev .. etc</p>
+                </div>
+                <a href="under.html"><button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Start Learning</button></a>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card shadow-md rounded-lg overflow-hidden flex flex-col border border-solid border-white">
+            <img src="src/3.png" alt="Placeholder Image" class="w-full h-32 object-cover">
+            <div class="p-4 flex flex-col justify-between flex-grow">
+                <div>
+                    <h2 class="font-bold text-lg text-gray-100">Free resources to learn JavaScript</h2>
+                    <p class="mt-2 text-gray-400">Language, front-end devlopment</p>
+                </div>
+                <a href="under.html"><button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Start Learning</button></a>
+            </div>
+        </div>
 
-      <!-- Card 5 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="img/js.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">JavaScript</h5>
-            <p class="card-text">Repo to learn JS with full stack development.</p>
-            <a href="js.html" class="btn btn-primary">Start Learning</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="img/java.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">Java</h5>
-            <p class="card-text">Repo to learn Java with spring boot backend dev.</p>
-            <a href="java.html" class="btn btn-primary">Start Learning</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Card 7 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="img/android.jpg" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">Android</h5>
-            <p class="card-text">Repo to learn Android dev with Java.</p>
-            <a href="android.html" class="btn btn-primary">Start Learning</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Card 8 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="img/swift.svg" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">Swift</h5>
-            <p class="card-text">Repo to learn IOS dev with Swift.</p>
-            <a href="swift.html" class="btn btn-primary">Start Learning</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Card 9 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="img/react.png" class="card-img-top" alt="Image 1" style="width: 50px; padding: 10px;">
-          <div class="card-body">
-            <h5 class="card-title">Reactnative</h5>
-            <p class="card-text">Repo to learn Native mobile dev with React.</p>
-            <a href="reactnative.html" class="btn btn-primary">Start Learning</a>
-          </div>
-        </div>
-      </div>
-      <br><br><br><br>
-                    <nav aria-label="Page navigation">
-                      <ul class="pagination" style="justify-content: center;">
-                        <li class="page-item">
-                          <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                          </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="https://openrepo.in/">1</a></li>
-                        <li class="page-item"><a class="page-link" href="two.html">2</a></li>
-                        <li class="page-item"><a class="page-link" href="three.html">3</a></li>
-                        <li class="page-item"><a class="page-link" href="four.html">4</a></li>
-                        <li class="page-item"><a class="page-link" href="five.html">5</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="two.html" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
     </div>
-    <br><br><br><br>
-    <center>
-      <a href="https://openrepo.in/cheatsheet"><button style="border: none; background-color: black; border-radius: 5px; color: white; height: 50px; width: 250px;">OpenRepo - Cheat Sheet's</button></a>
-    </center>
-    
-  </div>
-  <br><br><br>
-  <footer class="footer">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-          <img src="img/vlogo.png" alt="Logo" class="logo">
-        </div>
-        <div class="col-md-6 text-center text-md-right">
-          <div class="contact-details">
-            <p>Contact us: openrepo.info@gmail.com</p>
-            <p>Social media: <a href="https://www.instagram.com/manohargella/" target="_blank">@manohargella</a></p>
-            <p>linkedin link: <a href="https://www.linkedin.com/in/manohar-gella-2926bb24b/" target="_blank">@manohargella</a></p>
-            <p><a href="tandc.html" target="_blank">Terms and Conditions</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p id="copyright"> </p>
-          <!-- <p class="copyright">
-            &copy; 2024 OpenRepo.in All Rights Reserved.
-          </p> -->
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Include Bootstrap's JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="year.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer-bg py-8 px-4">
+        <div class="container mx-auto text-gray-300 text-center">© 2024 OpenRepo. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        // Get the current year and update the footer
+        document.getElementById('currentYear').innerText = new Date().getFullYear();
+    </script>
 </body>
 </html>
+
