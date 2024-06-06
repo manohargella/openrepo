@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Soon!</title>
+    <link rel="icon" href="img/edgen.png">
+    <!-- Add Bootstrap CSS CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles for the background color and centering text */
+        body {
+            background: #6A0572; /* Violet background color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 36px;
+            color: #000; /* Black color */
+            background: #D9A7C7; /* Highlight background color */
+            padding: 10px 20px; /* Add padding to highlight */
+            border: 2px solid #6A0572; /* Highlight border */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+            font-weight: bold; /* Make it bold */
+            font-family: 'Arial', sans-serif; /* Use a different font */
+            text-align: center; /* Center horizontally */
+        }
+
+        h1 {
+            font-size: 48px;
+            background: -webkit-linear-gradient(#D9A7C7, #6A0572); /* Violet gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            color: #777; /* Dark white text color (light gray) */
+            animation: moveText 2s ease infinite alternate;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .button {
+            height: 50px;
+            width: 200px;
+            border-radius: 30px;
+            border: none;
+            background-color: #3B2667
+E;
+            background-image: #E2B0FF
+;
+            color: black;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <center>
+        <img src="img/edgen-modified.png" alt="" style="width: 100px;">
+    </center>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="logo">Ed-Gen</div>
+                <h1>Launching Soon!</h1>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <center>
+        <a href="index.html" ><button class="button">Explore Other Repos</button></a>
+    </center>
+
+    <!-- Add Bootstrap JS and jQuery CDN links (optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
