@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codiam Club - Web Development</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Background Neural Network Design */
+        .background-neural {
+            background-image: url('path/to/your-neural-network-background.svg'); /* Update this path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1; /* Adjust opacity for subtle effect */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans relative">
+
+    <!-- Background Layer -->
+    <div class="background-neural"></div>
+
+    <!-- Header with Club Logo -->
+    <header class="bg-gray-800 p-6 shadow-md flex items-center justify-center z-10">
+        <img src="codiam.jpeg" alt="Club Logo" class="h-16">
+    </header>
+
+    <!-- Main Content Section -->
+<main class="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-900 text-center z-10 relative">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-10 leading-tight">
+        Welcome to the Web Development Chapter!
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-2xl">
+        There’s nothing better than YouTube to learn anything. From tutorials to complete courses, YouTube offers an endless source of knowledge.
+    </p>
+    <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl">
+        Stay tuned! We're soon going to release a step-by-step roadmap with free resources to help you master full-stack web development with the MERN stack.
+    </p>
+    <button onclick="startHere()" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1">
+        Start Here
+    </button>
+</main>
+
+<!-- JavaScript for the "Start Here" Button -->
+<script>
+    function startHere() {
+        window.location.href = "resources.html"; // Replace with the correct path to the new page
+    }
+</script>
+
+</body>
+</html>
