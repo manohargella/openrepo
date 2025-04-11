@@ -1,13 +1,55 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Openrepo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenRepo.in</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <center>
-        <p>'Openrepo.in' is Under maintenance</p>
-        <p>manoharcodes@gmail.com</p>
-    </center>
+<body class="bg-gradient-to-br from-gray-900 via-blue-900 to-black min-h-screen text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="p-5 shadow-lg bg-black bg-opacity-70 flex justify-between items-center">
+    <h1 class="text-3xl font-extrabold text-blue-400 tracking-wide">OpenRepo.in</h1>
+    <nav class="text-sm md:text-base space-x-4">
+      <a href="#" class="hover:text-blue-300 transition">Home</a>
+      <a href="#tools" class="hover:text-blue-300 transition">Tools</a>
+      <a href="https://manohar.tech" class="hover:text-blue-300 transition">About Me</a>
+    </nav>
+  </header>
+
+  <!-- Cards Section -->
+  <main id="tools" class="p-10">
+    <h2 class="text-4xl font-bold text-center text-blue-300 mb-10">Student Tools & Utilities</h2>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- GPA Calculator Card -->
+      <a href="https://manohar.tech/gpa" class="bg-white bg-opacity-10 hover:bg-opacity-20 transition rounded-2xl p-6 text-center border border-blue-500 shadow-lg">
+        <img src="https://img.icons8.com/fluency/96/report-card.png" alt="GPA Calculator" class="mx-auto mb-4 w-20 h-20">        <h3 class="text-xl font-bold text-blue-200 mb-2">GPA Calculator</h3>
+        <p class="text-sm text-gray-300">Calculate your CGPA/SGPA based on your semester marks using a simple, student-friendly tool.</p>
+      </a>
+
+      <!-- Attendance Tracker -->
+      <div class="bg-white bg-opacity-10 opacity-70 rounded-2xl p-6 text-center border border-gray-500 shadow-lg cursor-not-allowed">
+        <img src="https://img.icons8.com/color/96/calendar.png" alt="Attendance Tracker" class="mx-auto mb-4 w-20 h-20 grayscale">
+        <h3 class="text-xl font-bold text-gray-400 mb-2">Attendance Tracker</h3>
+        <p class="text-sm text-gray-400">Coming soon...</p>
+      </div>
+
+      <!-- Assignment Planner -->
+      <div class="bg-white bg-opacity-10 opacity-70 rounded-2xl p-6 text-center border border-gray-500 shadow-lg cursor-not-allowed">
+        <img src="https://img.icons8.com/color/96/task.png" alt="Assignment Planner" class="mx-auto mb-4 w-20 h-20 grayscale">
+        <h3 class="text-xl font-bold text-gray-400 mb-2">Assignment Planner</h3>
+        <p class="text-sm text-gray-400">Coming soon...</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-20 text-center text-gray-400 text-sm py-6 border-t border-blue-700">
+    © 2025 OpenRepo.in | Made by Manohar Gella
+  </footer>
+
 </body>
 </html>
