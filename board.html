@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Whiteboard - Advanced Erasers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        #canvas {
+            border: 2px solid #333;
+            border-radius: 10px;
+            background: white;
+            cursor: crosshair;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            flex: 1;
+            margin: 20px;
+        }
+
+        .toolbar {
+            width: 90px;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px 10px;
+            margin: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .tool-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .tool-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .tool-btn.active {
+            background: #4CAF50;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .color-btn {
+            box-shadow: 0 0 0 3px white, 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .color-btn.active {
+            box-shadow: 0 0 0 3px #4CAF50, 0 0 0 6px white;
+        }
+
+        .eraser-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .eraser-btn {
+            background: #ff6b6b !important;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .eraser-btn.active {
+            background: #ff4444 !important;
+            box-shadow: 0 0 0 3px #ff6666, 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .eraser-mode {
+            width: 35px;
+            height: 35px;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            background: white;
+            font-size: 12px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .eraser-mode.active {
+            background: #ff4444;
+            color: white;
+            border-color: #ff6666;
+        }
+
+        .slider-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .size-slider {
+            width: 70px;
+            height: 4px;
+            border-radius: 2px;
+            background: #ddd;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .size-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        .size-display {
+            font-size: 11px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .mode-indicator {
+            font-size: 10px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .clear-btn {
+            background: #ff9800 !important;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas"></canvas>
+        <div class="toolbar">
+            <!-- Colors -->
+            <button class="tool-btn active color-btn" data-color="#000000" style="background: #000; color: white;">●</button>
+            <button class="tool-btn color-btn" data-color="#ff4444" style="background: #ff4444;">●</button>
+            <button class="tool-btn color-btn" data-color="#44ff44" style="background: #44ff44;">●</button>
+            <button class="tool-btn color-btn" data-color="#4444ff" style="background: #4444ff;">●</button>
+            <button class="tool-btn color-btn" data-color="#ffff44" style="background: #ffff44;">●</button>
+            
+            <!-- Eraser Group -->
+            <div class="eraser-group">
+                <button class="tool-btn eraser-btn" id="eraser">🧽</button>
+                <button class="eraser-mode" id="strokeEraser" title="Stroke Eraser">S</button>
+                <button class="eraser-mode" id="pixelEraser" title="Pixel Eraser">P</button>
+                <div class="mode-indicator" id="eraserMode">S</div>
+            </div>
+            
+            <!-- Clear -->
+            <button class="tool-btn clear-btn" id="clear">🗑️</button>
+            
+            <!-- Size Slider -->
+            <div class="slider-container">
+                <span style="font-size: 10px;">Size</span>
+                <input type="range" class="size-slider" id="sizeSlider" min="1" max="50" value="10">
+                <span class="size-display" id="sizeDisplay">10</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const colorBtns = document.querySelectorAll('.color-btn');
+        const eraserBtn = document.getElementById('eraser');
+        const strokeEraserBtn = document.getElementById('strokeEraser');
+        const pixelEraserBtn = document.getElementById('pixelEraser');
+        const clearBtn = document.getElementById('clear');
+        const sizeSlider = document.getElementById('sizeSlider');
+        const sizeDisplay = document.getElementById('sizeDisplay');
+        const eraserModeDisplay = document.getElementById('eraserMode');
+
+        // Set canvas size
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Drawing state
+        let isDrawing = false;
+        let currentColor = '#000000';
+        let currentSize = 10;
+        let isErasing = false;
+        let eraserMode = 'stroke'; // 'stroke' or 'pixel'
+
+        // Update size display
+        sizeSlider.addEventListener('input', (e) => {
+            currentSize = e.target.value;
+            sizeDisplay.textContent = currentSize;
+        });
+
+        // Color selection
+        colorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                colorBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentColor = btn.dataset.color;
+                isErasing = false;
+                eraserBtn.classList.remove('active');
+                strokeEraserBtn.classList.remove('active');
+                pixelEraserBtn.classList.remove('active');
+                canvas.style.cursor = 'crosshair';
+            });
+        });
+
+        // Main eraser toggle
+        eraserBtn.addEventListener('click', () => {
+            isErasing = !isErasing;
+            colorBtns.forEach(btn => btn.classList.remove('active'));
+            
+            if (isErasing) {
+                eraserBtn.classList.add('active');
+                canvas.style.cursor = eraserMode === 'stroke' ? 'crosshair' : 'grab';
+            } else {
+                eraserBtn.classList.remove('active');
+                canvas.style.cursor = 'crosshair';
+            }
+        });
+
+        // Eraser mode selection
+        strokeEraserBtn.addEventListener('click', () => {
+            if (!isErasing) return;
+            eraserMode = 'stroke';
+            strokeEraserBtn.classList.add('active');
+            pixelEraserBtn.classList.remove('active');
+            eraserModeDisplay.textContent = 'S';
+            canvas.style.cursor = 'crosshair';
+        });
+
+        pixelEraserBtn.addEventListener('click', () => {
+            if (!isErasing) return;
+            eraserMode = 'pixel';
+            pixelEraserBtn.classList.add('active');
+            strokeEraserBtn.classList.remove('active');
+            eraserModeDisplay.textContent = 'P';
+            canvas.style.cursor = 'grab';
+        });
+
+        // Clear canvas
+        clearBtn.addEventListener('click', () => {
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        });
+
+        // Mouse events
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+
+        // Touch events for mobile
+        canvas.addEventListener('touchstart', handleTouch);
+        canvas.addEventListener('touchmove', handleTouch);
+        canvas.addEventListener('touchend', stopDrawing);
+
+        function handleTouch(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent(e.type === 'touchstart' ? 'mousedown' : 
+                                            e.type === 'touchmove' ? 'mousemove' : 'mouseup', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(mouseEvent);
+        }
+
+        function getMousePos(e) {
+            const rect = canvas.getBoundingClientRect();
+            return {
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top
+            };
+        }
+
+        function startDrawing(e) {
+            isDrawing = true;
+            const pos = getMousePos(e);
+            draw(e);
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            if (isErasing) {
+                // Stroke Eraser - removes entire stroke paths
+                if (eraserMode === 'stroke') {
+                    ctx.globalCompositeOperation = 'destination-out';
+                    ctx.lineWidth = currentSize * 2;
+                    ctx.strokeStyle = 'rgba(255,255,255,1)';
+                } 
+                // Pixel Eraser - removes individual pixels
+                else {
+                    ctx.globalCompositeOperation = 'destination-out';
+                    ctx.lineWidth = currentSize;
+                    ctx.strokeStyle = 'rgba(255,255,255,1)';
+                    // Make pixel eraser more precise by filling small circles
+                    const pos = getMousePos(e);
+                    ctx.beginPath();
+                    ctx.arc(pos.x, pos.y, currentSize / 2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            } else {
+                // Normal drawing
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.lineWidth = currentSize;
+                ctx.strokeStyle = currentColor;
+            }
+
+            if (eraserMode !== 'pixel' || !isErasing) {
+                const pos = getMousePos(e);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(pos.x, pos.y);
+            }
+        }
+
+        function stopDrawing() {
+            if (isDrawing) {
+                ctx.beginPath();
+                isDrawing = false;
+            }
+        }
+
+        // Initialize stroke eraser as default
+        strokeEraserBtn.classList.add('active');
+
+        // Prevent scrolling on mobile
+        document.addEventListener('touchstart', function(e) {
+            if (e.target === canvas) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchend', function(e) {
+            if (e.target === canvas) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchmove', function(e) {
+            if (e.target === canvas) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    </script>
+</body>
+</html>
