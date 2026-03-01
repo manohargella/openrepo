@@ -64,6 +64,92 @@
     .theme-toggle:hover {
       transform: scale(1.1);
     }
+
+    /* Refined animations - cubic-bezier for premium feel */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-title { animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both; }
+    .hero-subtitle { animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both; }
+    .hero-desc { animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both; }
+
+    .card-animate { opacity: 0; }
+    .card-animate.visible {
+      animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .card-animate:nth-child(2).visible { animation-delay: 0.08s; }
+    .card-animate:nth-child(3).visible { animation-delay: 0.16s; }
+
+    /* Coming Soon - professional roadmap style */
+    .coming-soon-section {
+      opacity: 0;
+      animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+    }
+
+    @keyframes progressFill {
+      from { width: 0; }
+      to { width: 65%; }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .coming-soon-progress {
+      height: 3px;
+      background: rgba(59, 130, 246, 0.15);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .coming-soon-progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #3b82f6, #6366f1);
+      border-radius: 2px;
+    }
+
+    .coming-soon-card.visible .coming-soon-progress-bar {
+      animation: progressFill 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+    }
+
+    .roadmap-item {
+      opacity: 0;
+      transform: translateX(-12px);
+    }
+
+    .coming-soon-card.visible .roadmap-item {
+      animation: slideInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .coming-soon-card.visible .roadmap-item:nth-child(1) { animation-delay: 0.2s; }
+    .coming-soon-card.visible .roadmap-item:nth-child(2) { animation-delay: 0.35s; }
+    .coming-soon-card.visible .roadmap-item:nth-child(3) { animation-delay: 0.5s; }
+
+    .coming-soon-card {
+      position: relative;
+      border-left: 3px solid transparent;
+      transition: border-color 0.4s ease;
+    }
+
+    .coming-soon-card.visible {
+      border-left-color: #3b82f6;
+    }
   </style>
 </head>
 <body class="min-h-screen bg-gray-50 dark:bg-gradient-to-br dark:from-gray-900 dark:via-slate-900 dark:to-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
@@ -138,12 +224,12 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 pb-16 md:pb-24">
     <div class="text-center max-w-3xl mx-auto">
       <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight transition-colors duration-300">
-        Student Tools
-        <span class="block bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+        <span class="hero-title block">Student Tools</span>
+        <span class="hero-subtitle block bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
           Made Simple
         </span>
       </h2>
-      <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed transition-colors duration-300">
+      <p class="hero-desc text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed transition-colors duration-300">
         Powerful utilities designed to streamline your academic journey and help you stay organized.
       </p>
     </div>
@@ -154,7 +240,7 @@
     <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       
       <!-- GPA Calculator Card -->
-      <a href="https://fs-gc.vercel.app/" target="_blank" class="group card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md dark:shadow-lg border border-gray-100 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300">
+      <a href="https://fs-gc.vercel.app/" target="_blank" class="group card-hover card-animate bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md dark:shadow-lg border border-gray-100 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300">
         <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-500 dark:to-blue-600 group-hover:scale-110 transition-transform duration-300">
           <img src="https://img.icons8.com/fluency/96/positive-dynamic.png" alt="GPA Calculator" class="w-10 h-10">
         </div>
@@ -173,7 +259,7 @@
       </a>
 
       <!-- Attendance Tracker -->
-      <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md dark:shadow-lg border border-gray-100 dark:border-gray-700 opacity-75 cursor-not-allowed transition-all duration-300">
+      <div class="card-hover card-animate bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md dark:shadow-lg border border-gray-100 dark:border-gray-700 opacity-75 cursor-not-allowed transition-all duration-300">
         <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gray-100 dark:bg-gray-700">
           <img src="https://img.icons8.com/color/96/calendar.png" alt="Attendance Tracker" class="w-10 h-10 grayscale opacity-50">
         </div>
@@ -189,7 +275,7 @@
       </div>
 
       <!-- Assignment Planner -->
-      <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md dark:shadow-lg border border-gray-100 dark:border-gray-700 opacity-75 cursor-not-allowed transition-all duration-300">
+      <div class="card-animate card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md dark:shadow-lg border border-gray-100 dark:border-gray-700 opacity-75 cursor-not-allowed transition-all duration-300">
         <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gray-100 dark:bg-gray-700">
           <img src="https://img.icons8.com/color/96/task.png" alt="Assignment Planner" class="w-10 h-10 grayscale opacity-50">
         </div>
@@ -207,18 +293,35 @@
     </div>
 
     <!-- Coming Soon Section -->
-    <div class="mt-16 sm:mt-20">
-      <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-3xl p-8 sm:p-12 border border-blue-100 dark:border-blue-800/50 text-center max-w-4xl mx-auto transition-colors duration-300">
-        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white dark:bg-gray-800 shadow-md mb-6">
-          <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
+    <div class="mt-16 sm:mt-20 coming-soon-section">
+      <div id="comingSoonCard" class="coming-soon-card bg-white dark:bg-gray-800/50 rounded-2xl p-8 sm:p-10 border border-gray-200 dark:border-gray-700 max-w-4xl mx-auto">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white tracking-tight">
+            Roadmap
+          </h3>
+          <span class="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full">
+            In development
+          </span>
         </div>
-        <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
-          More Tools Coming Soon
-        </h3>
-        <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
-          Stay tuned for more helpful utilities to make student life easier! We're constantly working on new features and improvements.
+        <div class="coming-soon-progress mb-8">
+          <div class="coming-soon-progress-bar"></div>
+        </div>
+        <div class="space-y-4">
+          <div class="roadmap-item flex items-center gap-3 text-gray-600 dark:text-gray-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+            <span>Attendance Tracker — Track and manage class attendance</span>
+          </div>
+          <div class="roadmap-item flex items-center gap-3 text-gray-600 dark:text-gray-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+            <span>Assignment Planner — Organize deadlines and priorities</span>
+          </div>
+          <div class="roadmap-item flex items-center gap-3 text-gray-600 dark:text-gray-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 shrink-0"></span>
+            <span>More utilities in the pipeline</span>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-gray-500 dark:text-gray-500">
+          We're building tools to make student life easier. Stay tuned for updates.
         </p>
       </div>
     </div>
@@ -273,6 +376,29 @@
 
     // Initialize theme on page load
     setTheme(getTheme());
+
+    // Card scroll animations - stagger when grid enters view
+    const toolsGrid = document.querySelector('#tools .grid');
+    const cards = document.querySelectorAll('.card-animate');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          cards.forEach(card => card.classList.add('visible'));
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+    if (toolsGrid) cardObserver.observe(toolsGrid);
+
+    // Coming soon section - reveal on scroll
+    const comingSoonCard = document.getElementById('comingSoonCard');
+    const comingSoonObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    if (comingSoonCard) comingSoonObserver.observe(comingSoonCard);
 
     // Sidebar Management
     function toggleSidebar() {
