@@ -258,21 +258,30 @@ body {
   padding-right: 0.5rem;
 }
 
-.btn-open,
+.btn-copy,
 .btn-delete {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+  min-width: 52px;
+  min-height: 52px;
+  padding: 0.75rem;
   background: transparent;
   border: none;
   color: var(--text-muted);
+  font-size: 1.4rem;
+  line-height: 1;
   cursor: pointer;
   border-radius: var(--radius-sm);
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s, transform 0.15s;
 }
 
-.btn-open:hover {
+.btn-copy:active,
+.btn-delete:active {
+  transform: scale(0.95);
+}
+
+.btn-copy:hover {
   color: var(--accent);
   background: var(--accent-dim);
 }

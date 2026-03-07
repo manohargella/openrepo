@@ -131,7 +131,7 @@ function renderLinks() {
           </div>
         </a>
         <div class="link-actions">
-          <button class="btn-open" aria-label="Open" title="Open in new tab" data-url="${link.url}">↗</button>
+          <button class="btn-copy" aria-label="Copy link" title="Copy link" data-url="${link.url}">📋</button>
           <button class="btn-delete" aria-label="Delete" title="Remove link" data-id="${link.id}">×</button>
         </div>
       </div>
@@ -144,14 +144,20 @@ function renderLinks() {
   linksContainer.querySelectorAll('.btn-delete').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      removeLink(btn.dataset.id);
+      if (confirm('Are you sure you want to delete this link?')) {
+        removeLink(btn.dataset.id);
+      }
     });
   });
 
-  linksContainer.querySelectorAll('.btn-open').forEach((btn) => {
+  linksContainer.querySelectorAll('.btn-copy').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      window.open(btn.dataset.url, '_blank');
+      navigator.clipboard.writeText(btn.dataset.url).then(() => {
+        const origTitle = btn.title;
+        btn.title = 'Copied!';
+        setTimeout(() => { btn.title = origTitle; }, 1500);
+      });
     });
   });
 }
