@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Vault – Save & Revisit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="josh.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="logo">
+        <span class="logo-icon">⊞</span>
+        Link Vault
+      </h1>
+      <p class="tagline">Paste. Save. Revisit anytime.</p>
+    </header>
+
+    <section class="add-section">
+      <div class="input-wrapper">
+        <input 
+          type="text" 
+          id="titleInput" 
+          placeholder="Title (optional)"
+          class="title-input"
+        >
+        <textarea 
+          id="linkInput" 
+          placeholder="Paste your YouTube or any link here..."
+          rows="2"
+        ></textarea>
+        <button id="addBtn" class="btn-primary">
+          <span class="btn-text">Add Link</span>
+          <span class="btn-icon">+</span>
+        </button>
+      </div>
+      <p class="input-hint">Works with YouTube, articles, or any URL. Stored locally in your browser.</p>
+    </section>
+
+    <section class="links-section">
+      <div class="section-header">
+        <h2>Saved Links</h2>
+        <span id="linkCount" class="link-count">0 links</span>
+      </div>
+
+      <div id="linksContainer" class="links-grid">
+        <!-- Links rendered by JS -->
+      </div>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">📎</div>
+        <h3>No links saved yet</h3>
+        <p>Paste a link above and hit Add to get started. Your links stay here even after you close the tab.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="josh.js"></script>
+</body>
+</html>
